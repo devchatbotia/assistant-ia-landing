@@ -167,6 +167,37 @@
             width: 100%;
         }
 
+        /* Nouveau style pour le bouton Calendly */
+        .cta-calendly {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #00f7ff, #0066ff);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 10px 25px -5px rgba(0, 102, 255, 0.4);
+            letter-spacing: -0.01em;
+            margin: 15px 0 5px;
+        }
+
+        .cta-calendly:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 30px -8px rgba(0, 247, 255, 0.4);
+        }
+
+        .cta-calendly i {
+            margin-left: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-calendly:hover i {
+            transform: translateX(5px);
+        }
+
         .badge {
             display: inline-flex;
             align-items: center;
@@ -803,6 +834,31 @@
             }
         }
 
+        /* SECTION CTA CALENDLY */
+        .cta-section {
+            background: linear-gradient(145deg, var(--bg-soft), #ffffff);
+            border-radius: var(--radius-main);
+            padding: 70px 40px;
+            text-align: center;
+            margin: 40px 0 20px;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-main);
+        }
+
+        .cta-section h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
         /* FOOTER SIMPLIFIÉ - VERSION MINIMALISTE 2 COLONNES */
         .footer {
             background: var(--bg-soft);
@@ -966,7 +1022,7 @@
             opacity: 1;
         }
 
-        /* STICKY CTA MOBILE */
+        /* STICKY CTA MOBILE - lien Calendly direct */
         .sticky-cta {
             display: none;
         }
@@ -982,12 +1038,13 @@
                 z-index: 2000;
                 padding: 0 16px;
             }
-            .sticky-cta .btn {
+            .sticky-cta .cta-calendly {
                 width: 100%;
                 max-width: 420px;
                 padding: 14px 32px;
                 font-size: 0.98rem;
                 box-shadow: 0 14px 34px rgba(0,0,0,0.15);
+                margin: 0;
             }
         }
 
@@ -1044,7 +1101,8 @@
                     <a href="#solution">Solution</a>
                     <a href="#comment">Comment ça marche</a>
                     <a href="#offre">Tarif</a>
-                    <a href="#offre" class="btn-secondary">Réserver mon appel</a>
+                    <!-- Navbar scroll vers offre (formulaire) - cohérent avec hiérarchie -->
+                    <a href="#offre" class="btn-secondary">Être rappelé</a>
                 </div>
             </nav>
         </div>
@@ -1065,8 +1123,18 @@
                         <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Édité par DevChatbotIA®</span>
                         <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Solution développée en France · Marques déposées</span>
                     </div>
-                    <div style="margin: 20px 0 26px;">
-                        <a href="#offre" class="btn">Réserver mon appel découverte <i class="fas fa-arrow-right"></i></a>
+                    <div style="margin: 20px 0 10px;">
+                        <!-- BOUTON CTA CALENDLY PRINCIPAL - 30min assumé -->
+                        <a href="https://calendly.com/direction-devchatbotia/30min"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="cta-calendly">
+                           Planifier mon appel découverte (30 min) <i class="fas fa-calendar-alt"></i>
+                        </a>
+                        <!-- Micro-phrase rassurante -->
+                        <p style="font-size:0.9rem; color: var(--muted); margin-top:12px;">
+                            🔒 Sans engagement · 30 min · Aucun paiement demandé
+                        </p>
                     </div>
                     <div class="micro-proof">
                         <span><i class="fas fa-check-circle"></i> Configuration personnalisée incluse</span>
@@ -1244,7 +1312,7 @@
         </div>
     </section>
 
-    <!-- OFFRE + FORMULAIRE -->
+    <!-- OFFRE + FORMULAIRE (rôle clair : être rappelé) -->
     <section id="offre" class="section">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
@@ -1268,8 +1336,8 @@
                 </div>
 
                 <div class="form-card">
-                    <h3 class="form-title">Réserver mon appel (15 min)</h3>
-                    <p class="form-sub">Appel découverte (15 min) · Réponse sous 24h</p>
+                    <h3 class="form-title">Être rappelé gratuitement</h3>
+                    <p class="form-sub">Laissez vos coordonnées · Réponse sous 24h</p>
 
                     <!-- FORMULAIRE NETLIFY AVEC REDIRECT -->
                     <form name="lead-devchatbotia"
@@ -1316,14 +1384,14 @@
 
                         <div class="form-foot">
                             <button type="submit" class="btn btn-block">
-                                <span>Réserver mon appel (15 min)</span>
+                                <span>Être rappelé gratuitement</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
-                            <p style="font-size: 0.9rem; color: var(--accent-primary); margin: 10px 0 5px;">Appel découverte (15 min)</p>
+                            <p style="font-size: 0.9rem; color: var(--accent-primary); margin: 10px 0 5px;">Réponse sous 24h</p>
                             <p style="font-size: 0.95rem; color: var(--accent-primary); margin: 5px 0 5px;">
                                 Nous ouvrons actuellement les premiers comptes indépendants.<br>Activation rapide (généralement sous 48h).
                             </p>
-                            <p class="legal-note">Appel découverte gratuit – réponse sous 24h. Aucune carte bancaire demandée.</p>
+                            <p class="legal-note">Gratuit · Aucune carte bancaire demandée.</p>
                         </div>
 
                     </form>
@@ -1358,10 +1426,23 @@
                     <p>L'assistant IA est une IA conversationnelle configurée selon votre activité. Il répond automatiquement aux messages entrants, pose quelques questions de qualification et envoie votre lien de réservation. Vous recevez uniquement les demandes confirmées.</p>
                 </div>
             </div>
+
+            <!-- SECTION CTA CALENDLY BAS DE PAGE (30 min assumé) -->
+            <div class="cta-section">
+                <h3>Prêt à ne plus laisser de prospect sans réponse ?</h3>
+                <p>Planifiez directement un appel découverte de 30 minutes pour discuter de votre activité.</p>
+                <a href="https://calendly.com/direction-devchatbotia/30min"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cta-calendly" style="padding: 20px 50px; font-size: 1.2rem;">
+                   Planifier mon appel (30 min) <i class="fas fa-arrow-right"></i>
+                </a>
+                <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Sans engagement · 30 min · Aucun paiement demandé</p>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER SIMPLIFIÉ - VERSION MINIMALISTE -->
+    <!-- FOOTER SIMPLIFIÉ -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1397,9 +1478,14 @@
         </div>
     </footer>
 
-    <!-- Sticky CTA mobile -->
+    <!-- Sticky CTA mobile - lien Calendly direct (30 min assumé) -->
     <div class="sticky-cta">
-        <a href="#offre" class="btn">Réserver mon appel découverte</a>
+        <a href="https://calendly.com/direction-devchatbotia/30min"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="cta-calendly">
+           Planifier mon appel (30 min)
+        </a>
     </div>
 
     <script>
