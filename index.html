@@ -56,73 +56,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ===== AJUSTEMENTS MOBILES BOUTON FLOTTANT ET ESPACEMENTS ===== */
-        @media (max-width: 768px) {
-            /* 1️⃣ Padding global pour que le bouton ne cache rien */
-            body {
-                padding-bottom: 110px !important;
-            }
-            
-            /* 2️⃣ Taille réduite du bouton flottant */
-            .sticky-cta .cta-calendly {
-                padding: 12px 24px !important;
-                font-size: 15px !important;
-                height: 48px !important;
-                min-height: 48px !important;
-                line-height: 1 !important;
-                border-radius: 40px !important;
-            }
-            
-            /* 3️⃣ Paddings verticaux réduits sur mobile */
-            .section {
-                padding: 60px 0 !important;
-            }
-            
-            /* 4️⃣ Hero moins haut sur mobile */
-            .hero {
-                padding: 20px 0 40px !important;
-            }
-            
-            /* 5️⃣ Footer moins haut sur mobile */
-            .footer {
-                padding: 40px 0 20px !important;
-                margin-top: 40px !important;
-            }
-            
-            /* 6️⃣ Réduction des cards */
-            .card, .price-card, .form-card {
-                padding: 32px 24px !important;
-            }
-            
-            /* 7️⃣ ROI card moins haute */
-            .roi-card {
-                padding: 48px 24px !important;
-            }
-            
-            .roi-highlight {
-                font-size: 3.2rem !important;
-            }
-            
-            /* 8️⃣ Steps grid ajusté */
-            .grid-steps {
-                gap: 16px !important;
-                margin: 40px 0 20px !important;
-            }
-            
-            .step-item {
-                padding: 24px 12px !important;
-            }
-            
-            /* 9️⃣ CTA section moins haute */
-            .cta-section {
-                padding: 40px 20px !important;
-            }
-            
-            .cta-section h3 {
-                font-size: 1.8rem !important;
-            }
-        }
-
         .container {
             max-width: 1320px;
             margin: 0 auto;
@@ -1138,6 +1071,90 @@
         @media (min-width: 1025px) {
             .section {
                 padding: 90px 0 !important;
+            }
+        }
+
+        /* ===== AJUSTEMENTS MOBILES BOUTON FLOTTANT ET ESPACEMENTS ===== */
+        @media (max-width: 768px) {
+            /* 1️⃣ Padding global pour que le bouton ne cache rien */
+            body {
+                padding-bottom: 110px !important;
+            }
+            
+            /* 2️⃣ Taille réduite du bouton flottant */
+            .sticky-cta .cta-calendly {
+                padding: 12px 24px !important;
+                font-size: 15px !important;
+                height: 48px !important;
+                min-height: 48px !important;
+                line-height: 1 !important;
+                border-radius: 40px !important;
+            }
+            
+            /* 3️⃣ Paddings verticaux réduits sur mobile (compactage) */
+            .section {
+                padding: 60px 0 !important;
+            }
+            
+            /* 4️⃣ Hero moins haut sur mobile */
+            .hero {
+                padding: 20px 0 40px !important;
+            }
+            
+            /* 5️⃣ Footer moins haut sur mobile */
+            .footer {
+                padding: 40px 0 20px !important;
+                margin-top: 40px !important;
+            }
+            
+            /* 6️⃣ Réduction des cards */
+            .card, .price-card, .form-card {
+                padding: 32px 24px !important;
+            }
+            
+            /* 7️⃣ Steps grid ajusté */
+            .grid-steps {
+                gap: 16px !important;
+                margin: 40px 0 20px !important;
+            }
+            
+            .step-item {
+                padding: 24px 12px !important;
+            }
+            
+            /* 8️⃣ CTA section moins haute */
+            .cta-section {
+                padding: 40px 20px !important;
+            }
+            
+            .cta-section h3 {
+                font-size: 1.8rem !important;
+            }
+        }
+
+        /* ===== CORRECTIF SPÉCIFIQUE POUR "SUPPLÉME" QUI DÉBORDE ===== */
+        @media (max-width: 768px) {
+            .roi-highlight {
+                font-size: 2.6rem !important;
+                line-height: 1.1 !important;
+                letter-spacing: -0.02em !important;
+                word-break: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+
+        /* ===== RÉDUCTION SUPPLÉMENTAIRE DU VERTICAL SPACING MOBILE ===== */
+        @media (max-width: 768px) {
+            .section {
+                padding: 45px 0 !important;
+            }
+            
+            .roi-card {
+                padding: 40px 20px !important;
+            }
+            
+            .roi-card p {
+                margin-top: 10px !important;
             }
         }
     </style>
