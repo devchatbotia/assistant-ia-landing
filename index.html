@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta description optimisée avec bénéfice et douleur -->
     <meta name="description" content="Assistant IA autonome pour indépendants solo : réponse automatique aux messages, qualification simple et envoi du lien d'agenda 24h/24. Ne laissez plus aucun prospect sans réponse. Configuration personnalisée incluse.">
-    <title>DevChatbotIA® – Agents IA Autonomes® pour indépendants</title>
+    <title>Assistant IA pour indépendants – DevChatbotIA®</title>
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1014,6 +1014,26 @@
             
             .price .period {
                 font-size: 1.2rem;
+            }
+        }
+
+        /* ===== AJOUTS MOBILES UNIQUEMENT (CONSIGNES) ===== */
+        @media (max-width: 768px) {
+            /* 1️⃣ Réduire l'espace en haut du Hero */
+            .hero {
+                padding-top: 40px !important;
+            }
+
+            /* 2️⃣ Ajuster le CTA flottant (position verticale uniquement) */
+            .sticky-cta {
+                bottom: 20px !important;
+            }
+        }
+
+        /* ===== AJUSTEMENT SPACING HERO DESKTOP UNIQUEMENT ===== */
+        @media (min-width: 1025px) {
+            section.section:first-of-type {
+                padding-top: 80px !important;
             }
         }
     </style>
