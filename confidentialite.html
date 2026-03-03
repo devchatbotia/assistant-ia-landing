@@ -506,6 +506,19 @@
                 box-shadow: 0 14px 34px rgba(0,0,0,0.15);
             }
         }
+
+        /* ===== AJOUTS MOBILES UNIQUEMENT (CONSIGNES CORRIGÉES) ===== */
+        @media (max-width: 768px) {
+            /* 1️⃣ Réduire l'espace en haut sur mobile en ajustant le padding de la section */
+            .section {
+                padding: 70px 0 !important;
+            }
+
+            /* 2️⃣ Ajuster le CTA flottant (position verticale uniquement) */
+            .sticky-cta {
+                bottom: 20px !important;
+            }
+        }
     </style>
 </head>
 <body class="no-js">
