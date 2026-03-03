@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mentions légales de DevChatbotIA® : éditeur, contact, hébergement et informations réglementaires.">
+    <title>Mentions légales - DevChatbotIA®</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-soft: #faf9f7;
+            --bg-card: #ffffff;
+            --text-primary: #1c1c1e;
+            --text-secondary: #6b6b70;
+            --muted: #8e8e96;
+            --accent-primary: #1a2a27;
+            --accent-secondary: #2c3e3a;
+            --accent-glow: #b89e6f;
+            --success: #1e7e4b;
+            --border-light: #e8e4de;
+            --border-hard: #d4ccc4;
+            --shadow-main: 0 35px 80px -30px rgba(0,0,0,0.12);
+            --shadow-card: 0 20px 50px -20px rgba(0,0,0,0.08);
+            --radius-main: 52px;
+            --radius-lg: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 90px;
+            }
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        h1 {
+            font-size: clamp(3.2rem, 7vw, 5.1rem);
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.8rem;
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 600;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.6rem;
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            color: var(--accent-primary);
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 90%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 42px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid rgba(184,158,111,0.3);
+            background: linear-gradient(135deg, var(--accent-primary), #1f332f);
+            color: white;
+            box-shadow: var(--shadow-main), 0 2px 0 0 rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+            letter-spacing: -0.015em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+            transform: translateX(-120%) translateY(-120%) rotate(45deg);
+            transition: transform 0.6s;
+            opacity: 0.8;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #0f1d1a;
+            border-color: var(--accent-glow);
+            box-shadow: 0 45px 100px -30px rgba(26,42,39,0.3);
+        }
+
+        .btn:hover::before {
+            transform: translateX(120%) translateY(120%) rotate(45deg);
+        }
+
+        .btn i {
+            transition: transform 0.2s ease;
+        }
+
+        .btn:hover i {
+            transform: translateX(4px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent-primary);
+            color: var(--accent-primary);
+            padding: 10px 26px;
+            font-weight: 500;
+            font-size: 0.98rem;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-primary);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: rgba(26,42,39,0.03);
+            color: var(--accent-primary);
+            border: 1px solid rgba(184,158,111,0.2);
+            backdrop-filter: blur(2px);
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+            min-height: auto;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-main);
+            padding: 64px 56px;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-main);
+            border-color: var(--accent-glow);
+        }
+
+        .card p {
+            margin-bottom: 1.2rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul, .card ol {
+            margin: 1.2rem 0;
+            padding-left: 2rem;
+            color: var(--text-secondary);
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        .card strong {
+            color: var(--accent-primary);
+        }
+
+        .contact-info {
+            background: var(--bg-soft);
+            padding: 1.8rem;
+            border-radius: var(--radius-lg);
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .contact-info p {
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-info i {
+            color: var(--accent-glow);
+            width: 28px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-light);
+            margin: 2rem 0;
+        }
+
+        .navbar-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            letter-spacing: -0.04em;
+            text-decoration: none;
+        }
+
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer {
+            background: var(--bg-soft);
+            color: var(--text-primary);
+            padding: 60px 0 30px;
+            border-radius: 72px 72px 0 0;
+            margin-top: 100px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { 
+                grid-template-columns: 1fr; 
+                gap: 40px;
+            }
+        }
+
+        .footer h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 12px;
+            transition: color 0.2s;
+        }
+
+        .footer a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-primary);
+            margin-bottom: 8px;
+            letter-spacing: -0.05em;
+        }
+
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .footer-contact {
+            margin: 20px 0;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            color: var(--accent-glow);
+            width: 20px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-light);
+            margin-top: 30px;
+            padding-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+        }
+
+        .tech-badge {
+            color: var(--accent-primary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+        }
+
+        .micro-proof {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .micro-proof span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .micro-proof i {
+            color: var(--accent-primary);
+        }
+
+        @media (max-width: 1024px) {
+            .navbar { flex-direction: column; gap: 14px; padding: 14px 0; }
+            .nav-links { gap: 18px; flex-wrap: wrap; justify-content: center; }
+            .container { padding: 0 22px; }
+            .section { padding: 80px 0; }
+            .card { padding: 48px 32px; }
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .card { padding: 36px 24px; }
+        }
+
+        @keyframes floatUp {
+            0% { opacity: 0; transform: translateY(26px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .section, .card {
+            opacity: 0;
+        }
+
+        body.loaded .section,
+        body.loaded .card {
+            animation: floatUp 0.9s ease forwards;
+        }
+
+        .sticky-cta {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .sticky-cta {
+                display: flex;
+                justify-content: center;
+                position: fixed;
+                bottom: 22px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2000;
+                padding: 0 16px;
+            }
+            .sticky-cta .btn {
+                width: 100%;
+                max-width: 420px;
+                padding: 14px 32px;
+                font-size: 0.98rem;
+                box-shadow: 0 14px 34px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body class="no-js">
+    <!-- NAVBAR -->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar" id="navbar">
+                <a href="index.html" class="logo">DevChatbotIA®</a>
+                <div class="nav-links">
+                    <a href="index.html#probleme">Problème</a>
+                    <a href="index.html#solution">Solution</a>
+                    <a href="index.html#comment">Comment ça marche</a>
+                    <a href="index.html#offre">Tarif</a>
+                    <a href="index.html#offre" class="btn-secondary">Voir comment ça fonctionne</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- PAGE MENTIONS LÉGALES -->
+    <section class="section">
+        <div class="container">
+            <div class="card">
+                <div class="badge" style="margin-bottom: 2rem;">Mentions légales</div>
+                <h1>Mentions légales</h1>
+                <p style="font-size: 1.2rem; color: var(--accent-primary);">Dernière mise à jour : Mars 2026</p>
+                
+                <h2>Informations légales</h2>
+                
+                <div class="contact-info">
+                    <p><strong>Éditeur :</strong> DevChatbotIA®</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Place Jeanne d'Arc, 93130 Noisy-le-Sec</p>
+                    <p><i class="fas fa-globe"></i> <strong>Statut :</strong> Entreprise digitale, accessible à distance dans le monde entier</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email :</strong> direction@devchatbotia.com</p>
+                    <p><i class="fas fa-file-invoice"></i> <strong>Identifiant entreprise :</strong> 50429762300036</p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Téléphone :</strong> 09 81 01 32 07 / 06 58 14 92 34</p>
+                    <p><i class="fas fa-user-tie"></i> <strong>Responsable de publication :</strong> DevChatbotIA®</p>
+                    <p><i class="fas fa-shield-alt"></i> <strong>Contact RGPD :</strong> direction@devchatbotia.com</p>
+                </div>
+
+                <h3>Hébergeur</h3>
+                <div class="contact-info" style="background: var(--bg-soft);">
+                    <p><strong>GitHub, Inc.</strong></p>
+                    <p>88 Colin P. Kelly Jr. Street</p>
+                    <p>San Francisco, CA 94107</p>
+                    <p>United States</p>
+                </div>
+                <p>La présente landing est hébergée sur les serveurs de GitHub, Inc.</p>
+
+                <h3>Technologies proposées</h3>
+                <p>DevChatbotIA® conçoit et opère des solutions d'intelligence artificielle conversationnelle, incluant :</p>
+                <ul>
+                    <li>des Chatbots IA personnalisés,</li>
+                    <li>et des <strong>Agents IA Autonomes®</strong>, assistants intelligents capables d'agir sans intervention humaine directe.</li>
+                </ul>
+                <p><strong>Agents IA Autonomes® est une technologie propriétaire exclusive signée DevChatbotIA®.</strong></p>
+                <p>Toute reproduction ou usage non autorisé est strictement interdit.</p>
+
+                <hr>
+                
+                <!-- Note : PDF non disponible pour le moment -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- COLONNE 1 : IDENTITÉ -->
+                <div>
+                    <div class="footer-logo">DevChatbotIA®</div>
+                    <div class="footer-tagline">Agents IA Autonomes® — technologie propriétaire développée par DevChatbotIA®</div>
+                    
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> direction@devchatbotia.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 09 81 01 32 07</p>
+                    </div>
+                    
+                    <div class="micro-proof" style="gap: 14px; margin-top: 15px;">
+                        <span><i class="fas fa-check-circle"></i> Configuration personnalisée</span>
+                        <span><i class="fas fa-check-circle"></i> Sans engagement</span>
+                    </div>
+                </div>
+
+                <!-- COLONNE 2 : LÉGAL -->
+                <div>
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+
+            <!-- BAS DE FOOTER -->
+            <div class="footer-bottom">
+                <p>© 2026 DevChatbotIA® – Tous droits réservés</p>
+                <p class="tech-badge">Agents IA Autonomes® — technologie propriétaire exclusive</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="index.html" class="btn">← Retour à l'accueil</a>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('no-js');
+        });
+    </script>
+</body>
+</html>
