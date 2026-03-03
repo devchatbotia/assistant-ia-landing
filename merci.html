@@ -231,7 +231,7 @@
                 Choisir mon créneau maintenant <i class="fas fa-arrow-right"></i>
             </a>
             
-            <p style="color: #8e8e96; font-size: 0.9rem; margin-top: -8px;">Ou attendez 2 secondes, la fenêtre s'ouvre automatiquement.</p>
+            <p style="color: #8e8e96; font-size: 0.9rem; margin-top: -8px;">Ou attendez un instant, la fenêtre s'ouvre automatiquement.</p>
             
             <!-- Rappel des engagements -->
             <div class="micro-proof">
@@ -247,17 +247,20 @@
         </div>
     </div>
 
-    <!-- Calendly widgets JS -->
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly widget JS - sans async pour garantir le chargement -->
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
     
     <script>
-        // Popup automatique après 600ms (suffisant pour charger)
-        window.addEventListener("load", function() {
-            setTimeout(function() {
-                Calendly.initPopupWidget({ 
-                    url: "https://calendly.com/TON_LIEN_CALENDLY/15min" 
-                });
-            }, 600);
+        // Version BLINDÉE : ouvre Calendly même si le chargement est lent
+        window.addEventListener("load", function () {
+            function openCalendly() {
+                if (window.Calendly) {
+                    Calendly.initPopupWidget({ url: "https://calendly.com/TON_LIEN_CALENDLY/15min" });
+                } else {
+                    setTimeout(openCalendly, 200); // Réessaie toutes les 200ms
+                }
+            }
+            setTimeout(openCalendly, 400); // Premier essai après 400ms
         });
     </script>
 </body>
