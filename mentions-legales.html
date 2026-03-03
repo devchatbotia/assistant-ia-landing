@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mentions légales de DevChatbotIA® : éditeur, contact, hébergement et informations réglementaires.">
+    <!-- ✅ Canonical -->
+    <link rel="canonical" href="https://agentiaautonome.fr/mentions-legales.html">
+    <!-- ✅ Robots -->
+    <meta name="robots" content="index, follow">
+    <!-- ✅ Sécurité optionnelle -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Mentions légales - DevChatbotIA®</title>
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -468,6 +474,24 @@
                 box-shadow: 0 14px 34px rgba(0,0,0,0.15);
             }
         }
+
+        /* ===== AJOUTS MOBILES UNIQUEMENT ===== */
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0 !important;
+            }
+
+            .sticky-cta {
+                bottom: 20px !important;
+            }
+        }
+
+        /* ===== AJUSTEMENT SPACING DESKTOP ===== */
+        @media (min-width: 1025px) {
+            section.section:first-of-type {
+                padding-top: 80px !important;
+            }
+        }
     </style>
 </head>
 <body class="no-js">
@@ -502,20 +526,22 @@
                     <p><i class="fas fa-map-marker-alt"></i> <strong>Adresse :</strong> Place Jeanne d'Arc, 93130 Noisy-le-Sec</p>
                     <p><i class="fas fa-globe"></i> <strong>Statut :</strong> Entreprise digitale, accessible à distance dans le monde entier</p>
                     <p><i class="fas fa-envelope"></i> <strong>Email :</strong> direction@devchatbotia.com</p>
-                    <p><i class="fas fa-file-invoice"></i> <strong>Identifiant entreprise :</strong> 50429762300036</p>
+                    <!-- ✅ Micro-amélioration : Identifiant entreprise → SIRET -->
+                    <p><i class="fas fa-file-invoice"></i> <strong>SIRET :</strong> 50429762300036</p>
                     <p><i class="fas fa-phone-alt"></i> <strong>Téléphone :</strong> 09 81 01 32 07 / 06 58 14 92 34</p>
                     <p><i class="fas fa-user-tie"></i> <strong>Responsable de publication :</strong> DevChatbotIA®</p>
                     <p><i class="fas fa-shield-alt"></i> <strong>Contact RGPD :</strong> direction@devchatbotia.com</p>
                 </div>
 
+                <!-- ✅ Hébergeur corrigé : GitHub → Netlify -->
                 <h3>Hébergeur</h3>
                 <div class="contact-info" style="background: var(--bg-soft);">
-                    <p><strong>GitHub, Inc.</strong></p>
-                    <p>88 Colin P. Kelly Jr. Street</p>
+                    <p><strong>Netlify, Inc.</strong></p>
+                    <p>2325 3rd Street, Suite 215</p>
                     <p>San Francisco, CA 94107</p>
                     <p>United States</p>
                 </div>
-                <p>La présente landing est hébergée sur les serveurs de GitHub, Inc.</p>
+                <p>La présente landing est hébergée sur les serveurs de Netlify, Inc.</p>
 
                 <h3>Technologies proposées</h3>
                 <p>DevChatbotIA® conçoit et opère des solutions d'intelligence artificielle conversationnelle, incluant :</p>
