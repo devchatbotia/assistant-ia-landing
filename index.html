@@ -5,6 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta description optimisée avec bénéfice et douleur -->
     <meta name="description" content="Assistant IA autonome pour indépendants, freelances et petites équipes : réponse automatique aux messages, qualification simple et envoi du lien de réservation 24h/24. Ne laissez plus aucun prospect sans réponse. Configuration personnalisée incluse.">
+
+    <!-- SEO Social Preview -->
+    <meta property="og:title" content="Assistant IA pour indépendants, freelances et petites équipes – DevChatbotIA®">
+    <meta property="og:description" content="Assistant IA autonome qui répond automatiquement aux messages, qualifie les demandes et envoie votre lien de réservation 24h/24.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://agentiaautonome.fr/">
+    <meta property="og:image" content="https://agentiaautonome.fr/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="DevChatbotIA®">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Assistant IA pour indépendants – DevChatbotIA®">
+    <meta name="twitter:description" content="Un assistant IA autonome qui répond automatiquement et transforme chaque demande en rendez-vous.">
+    <meta name="twitter:image" content="https://agentiaautonome.fr/preview.jpg">
+
+    <link rel="canonical" href="https://agentiaautonome.fr/">
+
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon vide (aucune icône) -->
+    <link rel="icon" href="data:,">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DevChatbotIA",
+      "url": "https://agentiaautonome.fr",
+      "logo": "https://agentiaautonome.fr/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33981013207",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Assistant IA autonome DevChatbotIA",
+      "description": "Assistant IA autonome qui répond aux messages et transforme les demandes en rendez-vous.",
+      "brand": {
+        "@type": "Brand",
+        "name": "DevChatbotIA"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "59",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Assistant IA autonome DevChatbotIA",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "59",
+        "priceCurrency": "EUR"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "DevChatbotIA"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Est-ce compliqué à installer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Nous configurons votre assistant IA pour votre activité et il est prêt en 48h."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Est-ce que ça fonctionne avec WhatsApp ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. L'assistant IA peut être connecté à WhatsApp, Messenger, Instagram ou votre site web."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je arrêter quand je veux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. L'abonnement est sans engagement et peut être arrêté à tout moment."
+          }
+        }
+      ]
+    }
+    </script>
+
     <title>Assistant IA pour indépendants, freelances et petites équipes – DevChatbotIA®</title>
     <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1157,6 +1265,35 @@
                 margin-top: 10px !important;
             }
         }
+
+        /* ===== AJOUT POUR L'EFFET DYNAMIQUE (indicateur de frappe) ===== */
+        .typing-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 20px;
+            background: var(--bg-soft);
+            border-radius: 24px 24px 24px 8px;
+            border: 1px solid var(--border-light);
+            width: fit-content;
+        }
+        .typing-indicator span {
+            width: 8px;
+            height: 8px;
+            background: var(--text-secondary);
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: 0s; }
+        .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+            30% { transform: translateY(-6px); opacity: 1; }
+        }
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
 <body class="no-js">
@@ -1169,7 +1306,7 @@
     <div class="navbar-wrapper">
         <div class="container">
             <nav class="navbar" id="navbar">
-                <a href="index.html" class="logo">DevChatbotIA®</a>
+                <a href="/" class="logo">DevChatbotIA®</a>
                 <div class="nav-links">
                     <a href="#probleme">Problème</a>
                     <a href="#solution">Solution</a>
@@ -1217,7 +1354,8 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="message-thread">
+                    <!-- La conversation statique reste présente pour le fallback no-js -->
+                    <div class="message-thread" id="heroMessageThread">
                         <div class="msg in">
                             <div class="msg-avatar">📱</div>
                             <div class="msg-bubble">Bonjour, je suis intéressé par vos prestations. Vous avez un moment ?</div>
@@ -1241,7 +1379,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="calendar-snip">
+                    <div class="calendar-snip" id="heroCalendarSnip">
                         <span><i class="far fa-calendar-check"></i> Mercredi 11h30</span>
                         <span>➡️ Lien de réservation envoyé <i class="fas fa-check-circle" style="color: var(--success);"></i></span>
                     </div>
@@ -1534,6 +1672,11 @@
                         <span><i class="fas fa-check-circle"></i> Configuration personnalisée</span>
                         <span><i class="fas fa-check-circle"></i> Sans engagement</span>
                     </div>
+
+                    <!-- Mini paragraphe SEO (discret) -->
+                    <p style="max-width:600px;margin-top:20px;color:var(--muted);font-size:0.9rem;">
+                        DevChatbotIA® développe des assistants IA autonomes capables de répondre automatiquement aux messages, qualifier les prospects et envoyer des liens de réservation. Conçu pour les indépendants, freelances et petites équipes qui veulent automatiser leur prise de rendez-vous.
+                    </p>
                 </div>
 
                 <!-- COLONNE 2 : LÉGAL -->
@@ -1567,6 +1710,105 @@
             document.body.classList.add('loaded');
             document.body.classList.remove('no-js');
         });
+    </script>
+
+    <!-- Script pour l'animation de la conversation HERO (ralentie) -->
+    <script>
+        (function() {
+            // Ne pas exécuter si le navigateur n'a pas JS (mais on est déjà dans un script)
+            const messageThread = document.getElementById('heroMessageThread');
+            const calendarSnip = document.getElementById('heroCalendarSnip');
+            if (!messageThread || !calendarSnip) return;
+
+            // Cacher le calendrier au début
+            calendarSnip.classList.add('hidden');
+
+            // Vider le contenu statique pour le remplacer par la version dynamique
+            messageThread.innerHTML = '';
+
+            // Définition des messages (copie du contenu original)
+            const messages = [
+                { role: 'in', avatar: '📱', text: 'Bonjour, je suis intéressé par vos prestations. Vous avez un moment ?' },
+                { role: 'out', avatar: '⚡', text: 'Bonjour ! Ravi de vous lire. Je peux vous proposer un créneau.<br><strong>2 petites questions :</strong> Quel type de prestation recherchez-vous ?<br><small>Réponse automatique · 24/7</small>' },
+                { role: 'in', avatar: '📱', text: 'Du conseil en stratégie digitale, pour un premier échange.' },
+                { role: 'out', avatar: '⚡', text: 'Parfait. Voici mes disponibilités cette semaine :' }
+            ];
+
+            // Délais ralentis pour une meilleure lisibilité
+            const typingDuration = 2600;  // 2,6 secondes d'indicateur de frappe
+            const messageDuration = 2000;  // 2 secondes entre les messages
+            let delay = 1000; // délai initial avant le premier message (1 seconde)
+
+            messages.forEach((msg, index) => {
+                if (msg.role === 'out') {
+                    // 1️⃣ Indicateur de frappe
+                    const typingTimeout = setTimeout(() => {
+                        const typingDiv = document.createElement('div');
+                        typingDiv.className = 'msg out';
+                        typingDiv.id = `typing-${index}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        avatar.textContent = msg.avatar;
+
+                        const indicator = document.createElement('div');
+                        indicator.className = 'typing-indicator';
+                        indicator.innerHTML = '<span></span><span></span><span></span>';
+
+                        typingDiv.appendChild(avatar);
+                        typingDiv.appendChild(indicator);
+                        messageThread.appendChild(typingDiv);
+                    }, delay);
+                    delay += typingDuration;
+
+                    // 2️⃣ Vrai message
+                    const msgTimeout = setTimeout(() => {
+                        const typingDiv = document.getElementById(`typing-${index}`);
+                        if (typingDiv) typingDiv.remove();
+
+                        const msgDiv = document.createElement('div');
+                        msgDiv.className = `msg ${msg.role}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        avatar.textContent = msg.avatar;
+
+                        const bubble = document.createElement('div');
+                        bubble.className = 'msg-bubble';
+                        bubble.innerHTML = msg.text; // contient du HTML (strong, small)
+
+                        msgDiv.appendChild(avatar);
+                        msgDiv.appendChild(bubble);
+                        messageThread.appendChild(msgDiv);
+                    }, delay);
+                    delay += messageDuration;
+                } else {
+                    // Message entrant
+                    const msgTimeout = setTimeout(() => {
+                        const msgDiv = document.createElement('div');
+                        msgDiv.className = `msg ${msg.role}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        avatar.textContent = msg.avatar;
+
+                        const bubble = document.createElement('div');
+                        bubble.className = 'msg-bubble';
+                        bubble.textContent = msg.text;
+
+                        msgDiv.appendChild(avatar);
+                        msgDiv.appendChild(bubble);
+                        messageThread.appendChild(msgDiv);
+                    }, delay);
+                    delay += messageDuration;
+                }
+            });
+
+            // Après le dernier message, attendre un peu puis afficher le calendrier
+            setTimeout(() => {
+                calendarSnip.classList.remove('hidden');
+            }, delay + 1000); // 1 seconde supplémentaire pour que l'utilisateur lise le dernier message
+        })();
     </script>
 </body>
 </html>
