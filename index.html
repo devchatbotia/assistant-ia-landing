@@ -1346,7 +1346,7 @@
             }
         }
 
-        /* Certification block allégé avec badge premium - classe directe pour garantir la taille */
+        /* Certification block allégé avec badge premium - technique identique à l'original : hauteur fixe 92px, largeur auto */
         .certification-block {
             background: linear-gradient(145deg, #ffffff, #fefaf5);
             border-radius: 32px;
@@ -1365,8 +1365,8 @@
             box-shadow: 0 28px 45px -18px rgba(26,42,39,0.2), 0 0 0 1px var(--accent-glow);
         }
         .google-badge {
-            width: 72px !important;
-            height: auto;
+            height: 92px;
+            width: auto;
             border-radius: 16px;
             background: #ffffff;
             padding: 8px;
@@ -1410,9 +1410,7 @@
                 gap: 20px;
                 padding: 28px 22px;
             }
-            .google-badge {
-                width: 64px !important;
-            }
+            /* Aucune redéfinition de largeur pour le badge : on conserve height:92px; width:auto; */
             .certification-block strong {
                 font-size: 1.2rem;
             }
