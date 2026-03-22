@@ -1346,7 +1346,7 @@
             }
         }
 
-        /* Certification block allégé avec badge premium */
+        /* Certification block allégé avec badge premium - classe directe pour garantir la taille */
         .certification-block {
             background: linear-gradient(145deg, #ffffff, #fefaf5);
             border-radius: 32px;
@@ -1364,8 +1364,8 @@
             transform: translateY(-3px);
             box-shadow: 0 28px 45px -18px rgba(26,42,39,0.2), 0 0 0 1px var(--accent-glow);
         }
-        .certification-block img {
-            width: 72px;
+        .google-badge {
+            width: 72px !important;
             height: auto;
             border-radius: 16px;
             background: #ffffff;
@@ -1375,7 +1375,7 @@
             transition: transform 0.2s;
             filter: drop-shadow(0 6px 16px rgba(0,0,0,0.12));
         }
-        .certification-block img:hover {
+        .google-badge:hover {
             transform: scale(1.02);
         }
         .certification-block div {
@@ -1410,8 +1410,8 @@
                 gap: 20px;
                 padding: 28px 22px;
             }
-            .certification-block img {
-                width: 64px;
+            .google-badge {
+                width: 64px !important;
             }
             .certification-block strong {
                 font-size: 1.2rem;
@@ -1492,7 +1492,7 @@
                     <p style="font-size:1.1rem; color:var(--accent-primary); font-weight:500; margin-top:10px;">Chaque demande sans réponse est une opportunité perdue.</p>
                     
                     <div class="certification-block">
-                        <img src="https://static.wixstatic.com/media/3c8e1e_3c45b0c7046e479f965c95b32a1dd6e1~mv2.png" alt="Certification Google Ads Search - Badge officiel">
+                        <img src="https://static.wixstatic.com/media/3c8e1e_3c45b0c7046e479f965c95b32a1dd6e1~mv2.png" alt="Certification Google Ads Search - Badge officiel" class="google-badge">
                         <div>
                             <strong>Certification Google Ads — Réseau de Recherche</strong>
                             <p>Optimisation des campagnes & conversion des prospects — <a href="https://3c8e1ed4-e5e2-451e-aef2-00488e75d9cb.usrfiles.com/ugd/3c8e1e_360b72375f724658b46eb30470e89091.pdf" target="_blank" rel="noopener noreferrer">Voir le certificat →</a></p>
