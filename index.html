@@ -189,7 +189,6 @@
             width: 100%;
         }
 
-        /* Réduction du padding horizontal sur mobile */
         @media (max-width: 768px) {
             .container {
                 padding: 0 16px;
@@ -360,7 +359,6 @@
             backdrop-filter: blur(2px);
         }
 
-        /* SECTION PADDING — version compacte premium */
         .section {
             padding: 60px 0;
             position: relative;
@@ -444,8 +442,25 @@
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 14px 0;
+            }
+            .logo {
+                font-size: 1.6rem;
+            }
             .nav-links {
-                gap: 20px;
+                width: 100%;
+                justify-content: space-between;
+                gap: 12px;
+            }
+            .nav-links a {
+                font-size: 0.95rem;
+            }
+            .btn-secondary {
+                padding: 8px 16px;
+                font-size: 0.92rem;
             }
         }
 
@@ -712,6 +727,18 @@
             .grid-steps {
                 gap: 16px !important;
                 margin: 40px 0 20px !important;
+            }
+        }
+
+        /* Grille spécifique pour la section canaux (3 colonnes puis 2 sur mobile) */
+        .channels-grid {
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .channels-grid {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -1319,7 +1346,7 @@
             }
         }
 
-        /* Certification block */
+        /* Certification block allégé */
         .certification-block {
             background: linear-gradient(145deg, #ffffff, #fefaf5);
             border-radius: 32px;
@@ -1467,8 +1494,8 @@
                     <div class="certification-block">
                         <img src="https://static.wixstatic.com/media/3c8e1e_3c45b0c7046e479f965c95b32a1dd6e1~mv2.png" alt="Certification Google Ads Search - Badge officiel">
                         <div>
-                            <strong>🏆 Certification Google Ads — Réseau de Recherche</strong>
-                            <p>Optimisation avancée des campagnes & conversion des prospects — <a href="https://3c8e1ed4-e5e2-451e-aef2-00488e75d9cb.usrfiles.com/ugd/3c8e1e_360b72375f724658b46eb30470e89091.pdf" target="_blank" rel="noopener noreferrer">Voir l’attestation officielle →</a></p>
+                            <strong>Certification Google Ads — Réseau de Recherche</strong>
+                            <p>Optimisation des campagnes & conversion des prospects — <a href="https://3c8e1ed4-e5e2-451e-aef2-00488e75d9cb.usrfiles.com/ugd/3c8e1e_360b72375f724658b46eb30470e89091.pdf" target="_blank" rel="noopener noreferrer">Voir le certificat →</a></p>
                         </div>
                     </div>
 
@@ -1533,7 +1560,7 @@
                 <h2 style="margin-top: 20px;">Tous vos canaux, un seul assistant</h2>
                 <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 12px;">Quel que soit l’origine du prospect, l’assistant IA engage la conversation immédiatement.</p>
             </div>
-            <div class="grid-steps" style="grid-template-columns: repeat(3, 1fr); margin-top: 20px;">
+            <div class="grid-steps channels-grid">
                 <div class="step-item"><i class="fas fa-globe premium-icon" style="font-size: 2.5rem; margin-bottom: 15px;"></i><p>Site web</p></div>
                 <div class="step-item"><i class="fab fa-google premium-icon" style="font-size: 2.5rem; margin-bottom: 15px;"></i><p>Google Ads</p></div>
                 <div class="step-item"><i class="fas fa-share-alt premium-icon" style="font-size: 2.5rem; margin-bottom: 15px;"></i><p>Réseaux sociaux</p></div>
